@@ -8,3 +8,23 @@ STONKZToken
 
 Timelock
 [00000000-0000-0000-0000-000000000000](https://bscscan.com/address/00000000-0000-0000-0000-000000000000)
+
+# Local Development
+
+The following assumes the use of `node@>=10` and Truffle Suite.
+
+## Install Dependencies
+
+`npm install`
+
+## Add wallet
+
+`add file named .secret to root dir containing mnumonic (DO NOT CHECK IN)`
+
+## Compile Contracts
+
+`truffle compile`
+
+## Run Deployment
+
+`truffle migrate --network development/testnet/bsc`
