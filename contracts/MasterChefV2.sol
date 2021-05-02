@@ -73,6 +73,7 @@ contract MasterChefV2 is Ownable, ReentrancyGuard {
     event SetFeeAddress(address indexed user, address indexed newAddress);
     event SetDevAddress(address indexed user, address indexed newAddress);
     event UpdateEmissionRate(address indexed user, uint256 goosePerBlock);
+    event UpdateStartBlock(address indexed user, uint256 newStartBlock);
 
     constructor(
         TheToken _egg,
@@ -257,5 +258,11 @@ contract MasterChefV2 is Ownable, ReentrancyGuard {
         massUpdatePools();
         eggPerBlock = _eggPerBlock;
         emit UpdateEmissionRate(msg.sender, _eggPerBlock);
+    }
+
+    // Update startBlock added so that masterchef can be deployed and tested before starting farming
+    function updateStartBlock(uint256 _startBlock) public onlyOwner {
+        startBlock = _startBlock;
+        emit UpdateStartBlock(msg.sender, _startBlock);
     }
 }
