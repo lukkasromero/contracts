@@ -1,13 +1,13 @@
 # STONKZ Contracts
 
 MasterChef
-[0x5F927189831EeAc858daEAe5a35e3584f76877E5](https://explorer-mainnet.maticvigil.com/address/0x5F927189831EeAc858daEAe5a35e3584f76877E5)
+[0xEa1ECE27C7a6e96B8b68F89598735f58551eE5ae](https://explorer-mainnet.maticvigil.com/address/0xEa1ECE27C7a6e96B8b68F89598735f58551eE5ae)
 
 STONK Token
-[0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530](https://explorer-mainnet.maticvigil.com/address/0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530)
+[0xF13e6278Da0717235BFC84D535C54461e957feED](https://explorer-mainnet.maticvigil.com/address/0xF13e6278Da0717235BFC84D535C54461e957feED)
 
 Timelock
-[0x7aD72Dd66Eee41DC5caA6b1833C3e65F8C3A2899](https://explorer-mainnet.maticvigil.com/address/0x7aD72Dd66Eee41DC5caA6b1833C3e65F8C3A2899)
+[0xDF4aCdF70347E64AFFbEA9cCc21B21e0c11041a5](https://explorer-mainnet.maticvigil.com/address/0xDF4aCdF70347E64AFFbEA9cCc21B21e0c11041a5)
 
 # Local Development
 
