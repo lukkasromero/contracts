@@ -63,6 +63,7 @@ module.exports = {
       network_id: 137,
       confirmations: 1,
       timeoutBlocks: 2000,
+      networkCheckTimeout: 90000,
       skipDryRun: false,
       gas: 5000000,           // Gas sent with each transaction (default: ~6700000)
       gasPrice: 10000000000,  // 20 gwei (in wei) (default: 100 gwei)
@@ -72,7 +73,6 @@ module.exports = {
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
-    //
     // development: {
     //  host: "127.0.0.1",     // Localhost (default: none)
     //  port: 8545,            // Standard Ethereum port (default: none)

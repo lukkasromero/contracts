@@ -9,23 +9,26 @@ module.exports = function (deployer, network, accounts) {
     const DEV = accounts[0]; 
 
     const blocksPerDay = 41000;
-    // 1,000 matic to give away
-    // blocks per week 287,000
-    // Rewards per block .061
+    // 9,000 matic to give away
+    // blocks per week 288,000
+    // Rewards per block .03125
+    // .0069
 
+    const startblock = 15283985
+    const endblock = startblock + 288000;
 
     deployer.then(async () => {
         try {
 
             // Deploy chef
             await deployer.deploy(smartChef, 
-                '0xF13e6278Da0717235BFC84D535C54461e957feED', // STONK
-                '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // wMatic
-                '61168981481481200',
-                14504555,
-                14627984,
-                1000, // 10% deposit fee
-                '0x40764fc19cdd4F4Befe0182423E38E2556290ab0' // Fee address
+                '0x4BEcDD1704e16962053792fd0d6Baa533Daaa702', // STONKX
+                '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // Matic
+                '31250000000000000',
+                startblock,
+                endblock,
+                500, // 5% deposit fee
+                '0xFb546fAb48E1bF83b57Cb91F64E418419A975022' // Fee address
                 );
                 const ChefInstance = await smartChef.deployed(); console.log(`SmartChefInstance: ${ChefInstance.address}`)
         
