@@ -1,10 +1,10 @@
-# STONKZ Contracts
+# CSWAP Contracts
 
 MasterChef
-[0xe823192885192092E73E42AAB42D23bf18276c55](https://explorer-mainnet.maticvigil.com/address/0xe823192885192092E73E42AAB42D23bf18276c55)
+[0xda237a2b663aba41747e471a1e001d2463867969](https://explorer-mainnet.maticvigil.com/address/0xda237a2b663aba41747e471a1e001d2463867969)
 
-STONK Token
-[0xF13e6278Da0717235BFC84D535C54461e957feED](https://explorer-mainnet.maticvigil.com/address/0xF13e6278Da0717235BFC84D535C54461e957feED)
+CSWAP Token
+[0x3bccf003a00c0320151042b2e4a2b177c53654e7](https://explorer-mainnet.maticvigil.com/address/0x3bccf003a00c0320151042b2e4a2b177c53654e7)
 
 Timelock
 [0xDF4aCdF70347E64AFFbEA9cCc21B21e0c11041a5](https://explorer-mainnet.maticvigil.com/address/0xDF4aCdF70347E64AFFbEA9cCc21B21e0c11041a5)

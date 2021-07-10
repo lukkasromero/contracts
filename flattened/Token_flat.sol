@@ -716,8 +716,8 @@ contract BEP20 is Context, IBEP20, Ownable {
 pragma solidity 0.6.12;
 
 
-// STONKToken with Governance.
-contract TheToken is BEP20('Stonkz', 'STONK') {
+// CSWAPToken with Governance.
+contract TheToken is BEP20('CSWAP', 'CSWAP') {
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
@@ -826,9 +826,9 @@ contract TheToken is BEP20('Stonkz', 'STONK') {
         );
 
         address signatory = ecrecover(digest, v, r, s);
-        require(signatory != address(0), "STONK::delegateBySig: invalid signature");
-        require(nonce == nonces[signatory]++, "STONK::delegateBySig: invalid nonce");
-        require(now <= expiry, "STONK::delegateBySig: signature expired");
+        require(signatory != address(0), "CSWAP::delegateBySig: invalid signature");
+        require(nonce == nonces[signatory]++, "CSWAP::delegateBySig: invalid nonce");
+        require(now <= expiry, "CSWAP::delegateBySig: signature expired");
         return _delegate(signatory, delegatee);
     }
 
@@ -858,7 +858,7 @@ contract TheToken is BEP20('Stonkz', 'STONK') {
         view
         returns (uint256)
     {
-        require(blockNumber < block.number, "STONK::getPriorVotes: not yet determined");
+        require(blockNumber < block.number, "CSWAP::getPriorVotes: not yet determined");
 
         uint32 nCheckpoints = numCheckpoints[account];
         if (nCheckpoints == 0) {
@@ -895,7 +895,7 @@ contract TheToken is BEP20('Stonkz', 'STONK') {
         internal
     {
         address currentDelegate = _delegates[delegator];
-        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying STONKs (not scaled);
+        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying CSWAP (not scaled);
         _delegates[delegator] = delegatee;
 
         emit DelegateChanged(delegator, currentDelegate, delegatee);
@@ -931,7 +931,7 @@ contract TheToken is BEP20('Stonkz', 'STONK') {
     )
         internal
     {
-        uint32 blockNumber = safe32(block.number, "STONK::_writeCheckpoint: block number exceeds 32 bits");
+        uint32 blockNumber = safe32(block.number, "CSWAP::_writeCheckpoint: block number exceeds 32 bits");
 
         if (nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber) {
             checkpoints[delegatee][nCheckpoints - 1].votes = newVotes;
